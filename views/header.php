@@ -1,8 +1,7 @@
-<?php require_once('./models/render.php'); ?>
-<!DOCTYPE>
 <html>
 <head>
-	<title>Test</title>
-	<?php echo render_js('test.js'); ?>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="views/reset.css">
+	<link rel="stylesheet" type="text/css" href="views/master.css">
 </head>
 <body>
