@@ -1,5 +1,6 @@
-<?php include('views/header.php'); ?>
+<?php 
+session_start();
 
-<?php include('views/footer.php'); ?>
 
-<?php php_info(); ?>
+
+php php_info(); ?>
