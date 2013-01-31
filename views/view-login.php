@@ -1,8 +1,9 @@
 <?php 
-	require_once("views/header.php");
+	include("views/header.php");
 ?>
 <div id="login-box">
-	<form action="#" method="post">
+	<form action="index.php" method="post">
+		<input type="hidden" name="action" value="validateLogin">
 		<table border="0">
 			<tr>
 				<td colspan="2" align="center"><h2 style="color:white;">Customer Login</h2></td>
@@ -27,5 +28,5 @@
 </div>
 
 <?php
-	require_once("views/footer.php")
+	include("views/footer.php")
 ?>

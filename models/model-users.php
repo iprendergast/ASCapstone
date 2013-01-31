@@ -7,7 +7,7 @@ function addUser($user)
 	$query = 'INSERT INTO UserTable (FirstName, MiddleName, LastName, Company,
 		Street, Street2, City, State, Zip, Phone, Email, DOB, Username, Password,
 		Department) VALUES (:FirstName, :MiddleName, :LastName, :Company,
-		:Street, :Street2, :City, :State, :Zip, :Phone, :Email, :DOB, :Username, :Password)'
+		:Street, :Street2, :City, :State, :Zip, :Phone, :Email, :DOB, :Username, :Password)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':FirstName', $user['FirstName']);
 	$statement->bindValue(':MiddleName', $user['MiddleName']);
@@ -41,7 +41,7 @@ function getUser($userID)
 	return $results;
 }
 
-function updateUser($user)
+function editUser($user)
 {
 	/* @var $db PDO */
 	global $db;
@@ -74,3 +74,4 @@ function updateUser($user)
 	$statement->closeCursor();
 
 }
+

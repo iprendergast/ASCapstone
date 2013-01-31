@@ -1,13 +1,12 @@
 <?php 
 session_start();
 
-require('model-users.php');
+require('models/model-users.php');
 
 if (isset($_REQUEST['action']))
 {
 	$action = $_REQUEST['action'];
 }
-
 else
 {
 	$action = 'login'; // default page
@@ -15,7 +14,11 @@ else
 
 switch ($action):
 	case 'login':
-	include 'login.php';
+	include 'views/view-login.php';
+	break;
+
+	case 'validateLogin':
+	//require 'model-login.php';
 	break;
 
 	default:
@@ -23,4 +26,3 @@ switch ($action):
 		include('view-error.php');
 endswitch;
 
-php php_info(); ?>
