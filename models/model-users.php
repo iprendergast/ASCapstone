@@ -75,3 +75,14 @@ function editUser($user)
 
 }
 
+function deleteUser($userID)
+{
+    /* @var $db PDO */
+    global $db;
+
+    $query = 'DELETE FROM userTable where userID = :userID';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':userID', $userID);
+    $statement->execute();
+    $statement->closeCursor();	
+}
