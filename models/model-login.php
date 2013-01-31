@@ -12,13 +12,13 @@ function getUserFromUsername($username)
 	return $results;
 }
 
-function verifyPassword($Username, $password)
+function verifyPassword($username, $password)
 {
 	$user = getUserFromUsername($username);
 
 	if (isset($user))
 	{
-		if ($password === $user['Password'])
+		if ($password == $user['Password'])
 		{
 			//username was found and password is a match
 			return true;
