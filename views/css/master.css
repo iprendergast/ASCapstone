@@ -46,8 +46,7 @@ body{
 
 .myButton{
 	font-size: 18px;
-	padding: 8px;
-	width: 80px;
+	padding: 10px 20px;
 	background-color: #393;
 	border:0px solid transparent;
 	color:white;

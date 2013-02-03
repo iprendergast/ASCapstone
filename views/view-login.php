@@ -10,7 +10,16 @@
 			</tr>
 
 			<tr>
-				<td colspan="2"><input type="text" name="User" class="myText" placeholder="Username"/></td>
+				<td colspan="2"><input type="text" name="User" class="myText" placeholder="Username"
+					<?php 
+						if (isset($user))
+							{ ?> value= <?php echo '"'.$user['Username'].'"';} 
+						//this is supposed to prefill username field if there is a session found for this user
+						// could also have a value="<?php if (isset($user)) {echo $user['Username'};}
+						//	else {echo '';} "
+					?>/>
+
+				</td>
 			</tr>
 
 			<tr>

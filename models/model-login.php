@@ -1,14 +1,27 @@
-<?php
+ <?php
 function getUserFromUsername($username)
 {
 	/* @var db PDO */
 	global $db;
 
-	$query = 'SELECT * FROM UserTable WHERE $Username = :Username';
+	$query = 'SELECT * FROM UserTable WHERE Username = :Username';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':Username', $username);
 	$statement->execute();
 	$results = $statment->fetch();
+	return $results;
+}
+
+function getUserFromUserID($userID)
+{
+	/* @var db PDO */
+	global $db;
+
+	$query = 'SELECT * FROM UserTable WHERE UserID = :UserID';
+	$statement = $bd->prepare($query);
+	$statement->bindValue(':UserID', $userID);
+	$statement->execute();
+	$results = $statement->fetch();
 	return $results;
 }
 

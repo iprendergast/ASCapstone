@@ -1,0 +1,25 @@
+#wrap{
+	width:100%;
+	height:100%;
+	padding:0px;
+	margin:0px;
+}
+
+#top-container, #content{
+	width:1000px;
+	margin:0px auto;
+	border: 1px solid red;
+}
+
+#top{
+	background-color: #555;
+	height:100px;
+}
+
+	#top-container{
+		height:100px;
+	}
+
+#content{
+	min-height:300px;
+}
