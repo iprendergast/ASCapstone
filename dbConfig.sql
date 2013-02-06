@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 07, 2013 at 12:28 AM
+-- Generation Time: Feb 07, 2013 at 12:39 AM
 -- Server version: 5.5.25
 -- PHP Version: 5.4.4
 
@@ -22,7 +22,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `Comment` (
   `CommentID` int(11) NOT NULL AUTO_INCREMENT,
-  `CommentDetailID` int(11) DEFAULT NULL,
+  `CommentDetailID` int(11) NOT NULL,
   PRIMARY KEY (`CommentID`),
   KEY `CommentDetailID` (`CommentDetailID`),
   KEY `CommentDetailID_2` (`CommentDetailID`)
