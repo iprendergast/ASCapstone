@@ -1,13 +1,13 @@
 <?php
-function addUser($user)
-{
+
+function addUser($user) {
 	/* @var $db PDO */
 	global $db;
 
-	$query = 'INSERT INTO UserTable (FirstName, MiddleName, LastName, Company,
-		Street, Street2, City, State, Zip, Phone, Email, DOB, Username, Password,
-		Department) VALUES (:FirstName, :MiddleName, :LastName, :Company,
-		:Street, :Street2, :City, :State, :Zip, :Phone, :Email, :DOB, :Username, :Password)';
+	$query = 'INSERT INTO 
+		UserTable (FirstName, MiddleName, LastName, Company, Street, Street2, City, State, Zip, Phone, Email, DOB, Username, Password) 
+		VALUES 
+		(:FirstName, :MiddleName, :LastName, :Company, :Street, :Street2, :City, :State, :Zip, :Phone, :Email, :DOB, :Username, :Password)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':FirstName', $user['FirstName']);
 	$statement->bindValue(':MiddleName', $user['MiddleName']);

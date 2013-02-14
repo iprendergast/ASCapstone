@@ -1,4 +1,5 @@
- <?php
+<?php
+
 function getUserFromUsername($username)
 {
 	/* @var db PDO */
@@ -8,20 +9,8 @@ function getUserFromUsername($username)
 	$statement = $db->prepare($query);
 	$statement->bindValue(':Username', $username);
 	$statement->execute();
-	$results = $statment->fetch();
-	return $results;
-}
-
-function getUserFromUserID($userID)
-{
-	/* @var db PDO */
-	global $db;
-
-	$query = 'SELECT * FROM UserTable WHERE UserID = :UserID';
-	$statement = $bd->prepare($query);
-	$statement->bindValue(':UserID', $userID);
-	$statement->execute();
 	$results = $statement->fetch();
+	$statement->closeCursor();
 	return $results;
 }
 
@@ -41,9 +30,7 @@ function verifyPassword($username, $password)
 			//password does not match record for username
 			return false;
 		}
-
 	}
-
 	else
 	{
 		//no record for username found
